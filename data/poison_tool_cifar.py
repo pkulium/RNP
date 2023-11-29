@@ -13,6 +13,8 @@ import torch.nn.functional as F
 import sys
 sys.path.append("..")
 from models import dynamic_models
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
 
 if torch.cuda.is_available():
     device = torch.device('cuda')
